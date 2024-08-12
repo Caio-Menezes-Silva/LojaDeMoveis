@@ -7,6 +7,9 @@ namespace Menu_Loja_Moveis
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine("Teste");
+
             Console.ReadKey();
         }
     }
