@@ -9,6 +9,7 @@ namespace Menu_Loja_Moveis
         {
 
             Console.WriteLine("Teste");
+            Console.WriteLine("Teste-2");
 
             Console.ReadKey();
         }
