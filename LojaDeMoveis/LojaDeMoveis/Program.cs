@@ -24,7 +24,7 @@ namespace Menu_Loja_Moveis
                 Console.WriteLine("Digite sua matrícula:");
             }
             else { Console.WriteLine("Entre em contato com o setor de T.i para realizar seu cadastro no sistema."); }
-
+         
             Console.Write("Matrícula: ");
             log.RegistrationNumber = Console.ReadLine();
 
@@ -35,9 +35,8 @@ namespace Menu_Loja_Moveis
 
             SistemaEstoque est = new SistemaEstoque();
 
-
             Console.WriteLine("Digite o número referente a ação que será feita:" +
-                " \n1- Consultar estoque \n2- Adicionar ao estoque \n3- Remover do estoque \n4- Repeitr. \n5- Encerrar");
+                " \n1- Consultar estoque \n2- Adicionar ao estoque \n3- Remover do estoque \n4- Encerrar.");
 
             int açao = int.Parse(Console.ReadLine());
             do
@@ -49,27 +48,23 @@ namespace Menu_Loja_Moveis
                         break;
 
                     case 2:
-                        Console.WriteLine("Digite o nome do produto a ser adicionado:");
-                        string produto = Console.ReadLine();
-                        Console.WriteLine("Digite o preço do produto a ser adicionado:");
-                        double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                        Console.WriteLine("Agora digite a quantidade:");
-                        int qtd = int.Parse(Console.ReadLine());
+                        est.AdicionarEstoque();
                         break;
-
                     case 3:
+                        est.RemoverEstoque();
                         break;
 
                     case 4:
+                        Console.WriteLine("Obrigado por utilizar nosso sistema");
                         break;
                 }
+               
                 Console.WriteLine("Digite o número referente a ação que será feita:" +
-                    " \n1- Consultar estoque \n2- Adicionar ao estoque \n3- Remover do estoque \n4- Repeitr. \n5- Encerrar");
+                    " \n1- Consultar estoque \n2- Adicionar ao estoque \n3- Remover do estoque \n4- Encerrar");
                 açao = int.Parse(Console.ReadLine());
-            } while (açao != 5);
+                
 
-
-
+            } while (açao != 4);
 
 
 
