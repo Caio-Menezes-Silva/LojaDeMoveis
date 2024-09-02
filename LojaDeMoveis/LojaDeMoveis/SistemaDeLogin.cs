@@ -19,6 +19,25 @@ namespace LojaDeMoveis
             }
         }
 
+        public string PergInit() {
+            string resp = Console.ReadLine().ToUpper();
+
+            if (resp != null || resp == "s")
+            {
+                Console.WriteLine("Digite sua matrícula:");
+            }
+            else { Console.WriteLine("Entre em contato com o setor de T.i para realizar seu cadastro no sistema."); }
+
+            Console.Write("Matrícula: ");
+            RegistrationNumber = Console.ReadLine();
+
+            Console.Write("Senha: ");
+            Password = Console.ReadLine();
+
+            return resp;
+        }
+
+
         public string Password
         {
             get { return _password; }

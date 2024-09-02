@@ -36,7 +36,10 @@ namespace Menu_Loja_Moveis
             SistemaEstoque est = new SistemaEstoque();
 
             Console.WriteLine("Digite o número referente a ação que será feita:" +
-                " \n1- Consultar estoque \n2- Adicionar ao estoque \n3- Remover do estoque \n4- Encerrar.");
+                " \n1- Consultar estoque" +
+                " \n2- Adicionar ao estoque" +
+                " \n3- Remover do estoque" +
+                " \n4- Encerrar.");
 
             int açao = int.Parse(Console.ReadLine());
             do
@@ -53,19 +56,18 @@ namespace Menu_Loja_Moveis
                     case 3:
                         est.RemoverEstoque();
                         break;
-
-                    case 4:
-                        Console.WriteLine("Obrigado por utilizar nosso sistema");
-                        break;
                 }
                
                 Console.WriteLine("Digite o número referente a ação que será feita:" +
-                    " \n1- Consultar estoque \n2- Adicionar ao estoque \n3- Remover do estoque \n4- Encerrar");
+                    " \n1- Consultar estoque" +
+                    " \n2- Adicionar ao estoque" +
+                    " \n3- Remover do estoque" +
+                    " \n4- Encerrar");
                 açao = int.Parse(Console.ReadLine());
                 
 
             } while (açao != 4);
-
+            Console.WriteLine("Obrigado por utilizar nosso sistema");
 
 
             Console.ReadKey();
